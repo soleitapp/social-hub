@@ -1,0 +1,97 @@
+/* Estilos compartidos por los menús del topbar (crear y notificaciones): copia de TopbarMenu.module.scss
+   del diseño base con los tokens resueltos a sus valores. */
+
+/* Cuadrado de 28px con borde, como los controles de los headers de página. */
+.button {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #232733;
+  border-radius: 6px;
+  background: #111316;
+  color: #8b9097;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #eef1f0;
+  border-color: #8b9097;
+}
+
+.icon.icon {
+  font-size: 16px;
+}
+
+/* Contador de la campana. */
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #009f8b;
+  font-family: var(--font-mono, 'Google Sans Code', ui-monospace, SFMono-Regular, Consolas, monospace);
+  font-size: 9px;
+  line-height: 16px;
+  text-align: center;
+  color: #0a0b0d;
+}
+
+/* El selector doble gana a los estilos de emotion del Paper de MUI. */
+.paper.paper {
+  min-width: 260px;
+  max-width: min(360px, calc(100vw - 16px));
+  margin-top: 8px;
+  background: #111316;
+  background-image: none;
+  border: 1px solid #232733;
+  border-radius: 6px;
+}
+
+.heading {
+  padding: 12px 16px 8px;
+  font-family: var(--font-mono, 'Google Sans Code', ui-monospace, SFMono-Regular, Consolas, monospace);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #8b9097;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 16px;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 13px;
+  text-align: left;
+  color: #eef1f0;
+  cursor: pointer;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.item span:last-child {
+  margin-left: auto;
+  font-family: var(--font-mono, 'Google Sans Code', ui-monospace, SFMono-Regular, Consolas, monospace);
+  font-size: 11px;
+  color: #8b9097;
+}
+
+.empty {
+  padding: 16px;
+  font-size: 13px;
+  color: #8b9097;
+}

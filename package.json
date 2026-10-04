@@ -1,0 +1,31 @@
+{
+  "name": "social-hub",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hub de marketing — qué está publicado y dónde, calendario y detalle de cada pieza.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.14.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.11",
+    "@mui/material": "^7.3.11",
+    "firebase": "^12.19.0",
+    "firebase-admin": "^14.5.0",
+    "google-auth-library": "^10.9.1",
+    "next": "14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@atproto/api": "^0.20.35",
+    "autoprefixer": "^10.4.20",
+    "dotenv": "^17.4.2",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14"
+  }
+}

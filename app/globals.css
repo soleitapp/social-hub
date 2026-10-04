@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+
+/* Títulos como en el diseño base (globals.scss): peso normal y espaciado ajustado. En @layer base para
+   que las utilidades de Tailwind (text-*, font-*, tracking-*) sigan ganando. */
+@layer base {
+  h1, h2, h3 {
+    font-weight: 400;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Layout de página, copia del diseño base (.main de ConsoleLayout): el header de la página queda suelto sobre
+   el fondo y todo lo que va después es el contenedor redondeado que hace el scroll. Cada página renderiza
+   un <PageHeader/> y un único contenedor. Una página que gestione su propio layout lleva la clase .libre. */
+.app-main { display: flex; flex: 1; flex-direction: column; min-width: 0; min-height: 0; }
+.app-main > :not(header):not(.libre) {
+  flex: 1;
+  min-height: 0;
+  margin: 0 24px 16px;
+  background: #111316;
+  border: 1px solid #232733;
+  border-radius: 6px;
+  overflow-y: auto;
+}
+.app-main > .libre { flex: 1; min-height: 0; overflow-y: auto; }
+@media (max-width: 768px) {
+  /* Sin márgenes laterales: el contenedor ocupa todo el ancho. */
+  .app-main > :not(header):not(.libre) { margin: 0; border-width: 1px 0 0; border-radius: 0; }
+}
+
+body {
+  background: #0a0b0d;
+  color: #eef1f0;
+}
+
+/* Scroll horizontal contenido, nunca el body */
+.scroll-x { overflow-x: auto; }
+
+/* Scroll discreto, igual que el diseño base (globals.scss): solo el pulgar redondeado, sin flechas ni canal.
+   Chrome/Edge ignoran los ::-webkit-scrollbar si hay scrollbar-width/color, por eso estos últimos
+   quedan solo como fallback para Firefox. Aplica a toda la app (la clase .thin-scroll ya no hace falta). */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+/* Canal invisible; el pulgar es una píldora con aire a los lados. */
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.22);
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.34);
+  background-clip: padding-box;
+}
+@supports not selector(::-webkit-scrollbar) {
+  * { scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.18) transparent; }
+}
+
+/* ===== Render de láminas IG (portado de Claude Design) — scoped a .ig-canvas ===== */
+.ig-canvas {
+  --accent: #009f8b; --accent-tint: #e6f5f2;
+  --ink: #0a0b0d; --ink-2: #2a2d31; --ink-4: #8b9097;
+  /* --font-sans NO se redefine: hereda la Open Sans cargada por next/font (html) */
+  --font-mono: 'Google Sans Code', 'JetBrains Mono', ui-monospace, monospace;
+}
+.ig-canvas .ig-slide { width: 540px; height: 675px; position: relative; overflow: hidden; display: flex; flex-direction: column; font-family: var(--font-sans); }
+.ig-canvas .ig-slide.dark { background: #0A0B0D; color: #f5f5f3; }
+.ig-canvas .ig-slide.light { background: #FFFFFF; color: var(--ink); }
+.ig-canvas .ig-slide.tint { background: var(--accent-tint); color: var(--ink); }
+.ig-canvas .ig-slide.teal { background: var(--accent); color: #fff; }
+.ig-canvas .ig-pad { padding: 44px 40px; display: flex; flex-direction: column; height: 100%; }
+.ig-canvas .ig-eyebrow { font-family: var(--font-mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); }
+.ig-canvas .ig-slide.teal .ig-eyebrow { color: rgba(255,255,255,.85); }
+.ig-canvas .ig-headline { font-size: 38px; line-height: 1.05; letter-spacing: -0.025em; font-weight: 400; margin: 0; text-wrap: balance; }
+.ig-canvas .ig-headline .accent { color: var(--accent); }
+.ig-canvas .ig-slide.teal .ig-headline .accent { color: #fff; text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 6px; }
+.ig-canvas .ig-stat { font-size: 144px; line-height: .9; letter-spacing: -0.05em; font-weight: 700; color: var(--accent); margin: 0; font-feature-settings: "tnum"; }
+.ig-canvas .ig-slide.teal .ig-stat { color: #fff; }
+.ig-canvas .ig-stat[data-len="long"] { font-size: 104px; letter-spacing: -.045em; }
+.ig-canvas .ig-source { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-4); margin-top: auto; display: flex; justify-content: space-between; align-items: end; }
+.ig-canvas .ig-slide.dark .ig-source { color: #686c72; }
+.ig-canvas .ig-slide.teal .ig-source { color: rgba(255,255,255,.7); }
+
+/* Botón principal de MUI (login): texto oscuro sobre el teal, igual que el diseño base. */
+.MuiButton-containedPrimary:not(.Mui-disabled) {
+  color: #0a0b0d;
+}

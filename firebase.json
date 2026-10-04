@@ -1,0 +1,18 @@
+{
+  "apphosting": {
+    "backendId": "TU-BACKEND-APPHOSTING",
+    "rootDir": "/",
+    "ignore": [
+      "node_modules",
+      ".git",
+      ".env*",
+      "firebase-debug.log",
+      "backups",
+      "video",
+      "design-source",
+      "dispatch",
+      "docs",
+      "specs"
+    ]
+  }
+}

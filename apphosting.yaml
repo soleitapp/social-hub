@@ -1,0 +1,25 @@
+# Firebase App Hosting (Cloud Run). Los secretos viven en Secret Manager; aquí solo se nombran.
+runConfig:
+  minInstances: 0   # se apaga sin tráfico: costo cero cuando nadie lo usa
+  maxInstances: 2
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+
+env:
+  # Publicación de solo lectura: el middleware bloquea todo /api salvo la lectura de Drive (ver middleware.js).
+  - variable: HUB_READONLY
+    value: "1"
+    availability: [RUNTIME]
+  - variable: DRIVE_ROOT_FOLDER_ID
+    value: ID_DE_LA_CARPETA_RAIZ_DE_DRIVE
+    availability: [RUNTIME]
+  - variable: GOOGLE_OAUTH_CLIENT_ID
+    secret: GOOGLE_OAUTH_CLIENT_ID@3
+    availability: [RUNTIME]
+  - variable: GOOGLE_OAUTH_CLIENT_SECRET
+    secret: GOOGLE_OAUTH_CLIENT_SECRET@3
+    availability: [RUNTIME]
+  - variable: GOOGLE_OAUTH_REFRESH_TOKEN
+    secret: GOOGLE_OAUTH_REFRESH_TOKEN@3
+    availability: [RUNTIME]

@@ -1,0 +1,23 @@
+/node_modules
+**/node_modules/
+/.next
+/out
+*.log
+.env*.local
+.DS_Store
+
+# secretos de publicación
+dispatch/.env
+.env
+
+# video: los mp4/audios viven en Drive, no en el repo; render/artefactos locales
+/video/out/
+/video/public/vo-*/
+/video/props-*.json
+/public/assets/*.mp4
+
+# copias de trabajo del estado (data/pieces.json.bak-*)
+data/*.bak-*
+
+# respaldos y planes de Firestore (datos reales; no se suben)
+/backups/

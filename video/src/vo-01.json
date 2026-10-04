@@ -1,0 +1,12 @@
+{
+  "fps": 30,
+  "voice": "es-ES-AlvaroNeural",
+  "total": 450,
+  "beats": [
+    { "dur": 90 },
+    { "dur": 90 },
+    { "dur": 90 },
+    { "dur": 90 },
+    { "dur": 90 }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "social-hub-dispatch",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "description": "Publicación local a Bluesky y X desde el manifiesto de distribución. Sin VPS, sin Postiz.",
+  "scripts": {
+    "test:bsky": "node post-test.mjs",
+    "test:x": "node x-test.mjs"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.13.35",
+    "dotenv": "^16.4.7",
+    "twitter-api-v2": "^1.18.2"
+  }
+}

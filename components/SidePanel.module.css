@@ -1,0 +1,101 @@
+/* Panel lateral: copia de SidePanel.module.scss del diseño base, con los tokens resueltos a sus valores. */
+
+/* El selector doble gana a los estilos de emotion del Paper de MUI. */
+.paper.paper {
+  width: 440px;
+  max-width: 100vw;
+  background: #111316;
+  background-image: none;
+  border-left: 1px solid #232733;
+}
+
+.header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px 12px;
+  border-bottom: 1px solid #232733;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: -0.025em;
+  color: #eef1f0;
+}
+
+/* Metadato: mono, mayúscula, como el "C01 · CAROUSEL" del hub. */
+.subtitle {
+  font-family: var(--font-mono, 'Google Sans Code', ui-monospace, SFMono-Regular, Consolas, monospace);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8b9097;
+}
+
+/* Botón cuadrado con borde, igual a los controles del header. */
+.close {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #232733;
+  border-radius: 6px;
+  background: none;
+  color: #8b9097;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.close:hover {
+  color: #eef1f0;
+  border-color: #8b9097;
+}
+
+.body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  padding: 20px 24px;
+  overflow-y: auto;
+}
+
+/* Acciones del header a la izquierda del botón de cierre. */
+.actions {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .paper.paper {
+    width: 100vw;
+    height: 100dvh;
+  }
+
+  .header {
+    padding-top: calc(16px + env(safe-area-inset-top));
+  }
+
+  .body {
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+    overscroll-behavior: contain;
+  }
+}
