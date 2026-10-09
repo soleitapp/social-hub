@@ -1,1 +1,62 @@
-{ "generatedAt": "", "pieces": [] }
+{
+  "generatedAt": "",
+  "pieces": [
+    {
+      "id": "p-001",
+      "type": "carousel",
+      "n": 1,
+      "title": "Título de la pieza",
+      "subtitle": "Carrusel de 3 láminas — ejemplo",
+      "driveDir": "p-001-titulo-de-la-pieza",
+      "base": {
+        "slides": [
+          {
+            "kind": "cover-dark",
+            "eyebrow": "EJEMPLO",
+            "headline": "Un titular que detiene el <span class='accent'>scroll</span>.",
+            "source": "DESLIZA →"
+          },
+          {
+            "kind": "stat-tint",
+            "eyebrow": "EL DATO",
+            "stat": "60%",
+            "headline": "Texto que explica la cifra en una línea.",
+            "source": "FUENTE · TU FUENTE 2026"
+          },
+          {
+            "kind": "cta-teal",
+            "eyebrow": "SIGUIENTE PASO",
+            "headline": "Cierre con una llamada a la acción.",
+            "source": "TU-DOMINIO.COM"
+          }
+        ]
+      },
+      "assets": [
+        {
+          "id": "p-001-carousel",
+          "format": "carousel",
+          "spec": "1080×1350 ×3",
+          "source": "design",
+          "status": "pending"
+        }
+      ],
+      "distributions": [
+        {
+          "platform": "instagram",
+          "surface": "post",
+          "assetId": "p-001-carousel",
+          "caption": "Caption de ejemplo para Instagram.",
+          "status": "draft"
+        },
+        {
+          "platform": "linkedin",
+          "surface": "post",
+          "assetId": "p-001-carousel",
+          "caption": "Caption de ejemplo para LinkedIn.",
+          "status": "scheduled",
+          "scheduledAt": "2026-01-15T10:00"
+        }
+      ]
+    }
+  ]
+}
