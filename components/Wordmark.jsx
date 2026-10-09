@@ -7,7 +7,7 @@ export default function Wordmark({ className }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 35 520 93" role="img" aria-label={BRAND_NAME} className={className}>
       <text x="260" y="110" textAnchor="middle" fontFamily="var(--font-sans), 'Open Sans', system-ui, sans-serif">
-        <tspan fontSize="100" fontWeight="600" letterSpacing="-2.5" fill="#009F8B">{BRAND_PRIMARY}</tspan>
+        <tspan fontSize="100" fontWeight="600" letterSpacing="-2.5" fill="#6B9EFF">{BRAND_PRIMARY}</tspan>
         <tspan fontSize="55" fontWeight="500" letterSpacing="-0.9" fill="#F5F5F3" dx="14">{BRAND_SECONDARY}</tspan>
       </text>
     </svg>

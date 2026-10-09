@@ -36,7 +36,7 @@ export default function LoginPage() {
   }
 
   return (
-    <main className="flex min-h-screen items-center justify-center p-4" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,159,139,0.14), transparent)' }}>
+    <main className="flex min-h-screen items-center justify-center p-4" style={{ background: 'radial-gradient(ellipse 60% 40% at 50% 0%, rgba(0,87,255,0.14), transparent)' }}>
       <section className="flex w-full max-w-[340px] flex-col gap-6 rounded-md border border-line bg-panel p-8">
         <h1 className="flex justify-center">
           <Wordmark className="block h-7 w-auto max-w-full" />

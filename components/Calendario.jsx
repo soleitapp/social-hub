@@ -8,10 +8,10 @@ import PageHeader from '@/components/PageHeader';
 
 const DIAS = ['lun', 'mar', 'mié', 'jue', 'vie', 'sáb', 'dom'];
 const TONO = {
-  published: 'border-primary/40 bg-primary/10 text-glow',
+  published: 'border-success/40 bg-success/10 text-success',
   deleted: 'border-error/30 bg-error/10 text-error/80',
   scheduled: 'border-warning/40 bg-warning/10 text-warning',
-  ready: 'border-secondary/40 bg-secondary/10 text-secondary',
+  ready: 'border-primary/40 bg-primary/10 text-glow',
   draft: 'border-line bg-white/5 text-sub',
 };
 

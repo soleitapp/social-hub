@@ -1,5 +1,5 @@
 // Textos de marca del wordmark y de la firma de los shorts (cámbialos por los tuyos).
-export const BRAND = { primary: 'Social', secondary: 'Hub', url: 'tu-dominio.com' };
+export const BRAND = { primary: 'Soleit', secondary: 'Hub', url: 'soleit.app' };
 
 // ADN de marca para los shorts (espejo de src/theme + TipCover).
 export const COLORS = {
@@ -7,10 +7,10 @@ export const COLORS = {
   paper: '#ffffff',
   white: '#ffffff',
   ink: '#1f2422',
-  teal: '#1abf9f',     // glow — acento sobre oscuro
-  tealBase: '#009f8b', // acento / fondo sólido
-  tealDark: '#00866f',
-  tealLightest: '#ecf8f4',
+  teal: '#6B9EFF',     // glow — acento sobre oscuro
+  tealBase: '#0057FF', // acento / fondo sólido
+  tealDark: '#0057FF',
+  tealLightest: '#E8EEFF',
   sub: '#8b9691',
   subInk: '#6b716e',
 };

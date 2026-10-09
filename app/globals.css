@@ -21,8 +21,8 @@
   flex: 1;
   min-height: 0;
   margin: 0 24px 16px;
-  background: #111316;
-  border: 1px solid #232733;
+  background: #172127;
+  border: 1px solid #2C3B45;
   border-radius: 6px;
   overflow-y: auto;
 }
@@ -33,8 +33,8 @@
 }
 
 body {
-  background: #0a0b0d;
-  color: #eef1f0;
+  background: #0E1519;
+  color: #EEF3F5;
 }
 
 /* Scroll horizontal contenido, nunca el body */
@@ -64,13 +64,13 @@ body {
 
 /* ===== Render de láminas IG (portado de Claude Design) — scoped a .ig-canvas ===== */
 .ig-canvas {
-  --accent: #009f8b; --accent-tint: #e6f5f2;
+  --accent: #0057FF; --accent-tint: #E8EEFF;
   --ink: #0a0b0d; --ink-2: #2a2d31; --ink-4: #8b9097;
   /* --font-sans NO se redefine: hereda la Open Sans cargada por next/font (html) */
   --font-mono: 'Google Sans Code', 'JetBrains Mono', ui-monospace, monospace;
 }
 .ig-canvas .ig-slide { width: 540px; height: 675px; position: relative; overflow: hidden; display: flex; flex-direction: column; font-family: var(--font-sans); }
-.ig-canvas .ig-slide.dark { background: #0A0B0D; color: #f5f5f3; }
+.ig-canvas .ig-slide.dark { background: #0A0B0D; color: #f5f5f3; --accent: #6B9EFF; }
 .ig-canvas .ig-slide.light { background: #FFFFFF; color: var(--ink); }
 .ig-canvas .ig-slide.tint { background: var(--accent-tint); color: var(--ink); }
 .ig-canvas .ig-slide.teal { background: var(--accent); color: #fff; }
@@ -89,5 +89,5 @@ body {
 
 /* Botón principal de MUI (login): texto oscuro sobre el teal, igual que el diseño base. */
 .MuiButton-containedPrimary:not(.Mui-disabled) {
-  color: #0a0b0d;
+  color: #0E1519;
 }

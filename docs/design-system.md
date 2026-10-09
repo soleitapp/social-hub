@@ -8,19 +8,22 @@ Una sola referencia visual. El tema es **oscuro**. Los valores de abajo son los 
 
 | Token | Valor | Uso |
 |---|---|---|
-| Fondo de página (`bg`) | `#0a0b0d` | Fondo general, texto sobre botones teal |
-| Panel / tarjeta (`panel`) | `#111316` | Contenedor principal, tarjetas, menús |
-| Panel 2 (`panel2`) | `#171a21` | Filas, marcos exteriores de menús |
-| Línea (`line`) | `#232733` | Todos los bordes y divisores |
-| Texto | `#eef1f0` | Texto principal |
-| Texto secundario (`sub`) | `#8b9097` | Metadatos, etiquetas, iconos |
-| Teal (marca) | `#009f8b` | Botón principal, contadores, bordes de acento |
-| Teal oscuro | `#007a6c` | Hover del botón principal |
-| Glow | `#1abf9f` | Acento sobre fondo oscuro (enlace activo, valores destacados) |
+| Fondo de página (`bg`) | `#0E1519` | Fondo general, texto sobre el botón principal |
+| Panel / tarjeta (`panel`) | `#172127` | Contenedor principal, tarjetas, menús |
+| Panel 2 (`panel2`) | `#202D35` | Filas, marcos exteriores de menús |
+| Línea (`line`) | `#2C3B45` | Todos los bordes y divisores |
+| Texto | `#EEF3F5` | Texto principal |
+| Texto secundario (`sub`) | `#8A99A3` | Metadatos, etiquetas, iconos |
+| Azul Soleit sobre oscuro (`teal`, `primary`) | `#6B9EFF` | Botón principal, contadores, bordes de acento |
+| Hover del principal (`tealdark`) | `#5790FF` | Hover del botón principal |
+| Glow | `#6B9EFF` | Acento sobre fondo oscuro (enlace activo, valores destacados; también el estado Listo) |
 | Error (texto) | `#ef9a9a` | Alertas y vencidos |
 | Advertencia | `#f6b93b` | Programado, faltantes |
+| Éxito (`success`) | `#81C784` | Publicado: chips, contadores, cobertura y calendario. Nunca el azul de marca |
 
-Reglas: el teal es el **único** color de marca. Color nuevo → primero al sistema, no a un componente.
+| Azul Soleit (piezas, fondos claros) | `#0057FF` | Acento de láminas, portadas e historias; sobre lámina oscura se usa `#6B9EFF` |
+
+Neutros y acento salen de Petroleum700, edición Soleit (tema oscuro). Reglas: el azul es el **único** color de marca. Color nuevo → primero al sistema, no a un componente.
 
 ## Tipografía
 
@@ -42,7 +45,7 @@ Reglas: el teal es el **único** color de marca. Color nuevo → primero al sist
 
 ```
 ┌ topbar · 56px · borde inferior · padding 0 24px ───────────────┐
-│ Social HUB       INICIO CALENDARIO PIEZAS   [buscar][+][🔔][👤] │
+│ Soleit HUB       INICIO CALENDARIO PIEZAS   [buscar][+][🔔][👤] │
 ├────────────────────────────────────────────────────────────────┤
 │ PageHeader · padding 12px 24px   Título │ filtros     acciones  │
 │ ┌ contenedor · margen 0 24px 16px · borde · radio 6 ─────────┐ │
@@ -72,5 +75,5 @@ Reglas: el teal es el **único** color de marca. Color nuevo → primero al sist
 ## Otros detalles
 
 - **Scrollbar:** 12px, carril transparente, sin flechas, pulgar píldora `rgba(255,255,255,.22)` (`.34` en hover) con borde transparente de 3px.
-- **Botón principal (MUI contained):** fondo teal, texto `#0a0b0d`, 15px/600, ícono de Google a la izquierda en el login.
+- **Botón principal (MUI contained):** fondo `#6B9EFF`, texto `#0E1519`, 15px/600, ícono de Google a la izquierda en el login.
 - **Estados de distribución:** Borrador, Listo, Programado, Publicado, Borrado (`auto` ya no existe).

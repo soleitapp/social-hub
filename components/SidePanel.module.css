@@ -4,9 +4,9 @@
 .paper.paper {
   width: 440px;
   max-width: 100vw;
-  background: #111316;
+  background: #172127;
   background-image: none;
-  border-left: 1px solid #232733;
+  border-left: 1px solid #2C3B45;
 }
 
 .header {
@@ -16,7 +16,7 @@
   justify-content: space-between;
   gap: 16px;
   padding: 16px 24px 12px;
-  border-bottom: 1px solid #232733;
+  border-bottom: 1px solid #2C3B45;
 }
 
 .heading {
@@ -32,7 +32,7 @@
   font-weight: 400;
   line-height: 28px;
   letter-spacing: -0.025em;
-  color: #eef1f0;
+  color: #EEF3F5;
 }
 
 /* Metadato: mono, mayúscula, como el "C01 · CAROUSEL" del hub. */
@@ -41,7 +41,7 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #8b9097;
+  color: #8A99A3;
 }
 
 /* Botón cuadrado con borde, igual a los controles del header. */
@@ -53,17 +53,17 @@
   width: 28px;
   height: 28px;
   padding: 0;
-  border: 1px solid #232733;
+  border: 1px solid #2C3B45;
   border-radius: 6px;
   background: none;
-  color: #8b9097;
+  color: #8A99A3;
   cursor: pointer;
   transition: color 0.15s, border-color 0.15s;
 }
 
 .close:hover {
-  color: #eef1f0;
-  border-color: #8b9097;
+  color: #EEF3F5;
+  border-color: #8A99A3;
 }
 
 .body {

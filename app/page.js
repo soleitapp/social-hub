@@ -9,12 +9,12 @@ import PageHeader from '@/components/PageHeader';
 export const metadata = { title: `Inicio · ${BRAND_NAME}` };
 
 // Orden de lectura de las redes: primero donde más se publica.
-const REDES = ['instagram', 'facebook', 'linkedin', 'x', 'bluesky', 'threads', 'tiktok', 'youtube', 'blog'];
+const REDES = ['instagram', 'facebook', 'linkedin', 'x', 'tiktok', 'youtube', 'blog'];
 
 const CELDA = {
-  published: { cls: 'bg-glow', title: 'Publicado' },
+  published: { cls: 'bg-success', title: 'Publicado' },
   scheduled: { cls: 'bg-warning', title: 'Programado' },
-  ready: { cls: 'bg-secondary', title: 'Listo' },
+  ready: { cls: 'bg-glow', title: 'Listo' },
   draft: { cls: 'bg-white/15', title: 'Borrador' },
   deleted: { cls: 'bg-error/60', title: 'Borrado' },
 };
@@ -79,9 +79,9 @@ export default function Page() {
 
       <div className="p-4">
       <div className="mb-5 grid grid-cols-2 gap-3 lg:grid-cols-4">
-        <Tile n={publicadas} total={total} label="Publicadas" color="text-glow" />
+        <Tile n={publicadas} total={total} label="Publicadas" color="text-success" />
         <Tile n={cuenta('scheduled')} total={total} label="Programadas" color="text-warning" />
-        <Tile n={cuenta('ready')} total={total} label="Listas" color="text-secondary" />
+        <Tile n={cuenta('ready')} total={total} label="Listas" color="text-glow" />
         <Tile n={cuenta('draft')} total={total} label="Borradores" color="text-sub" />
       </div>
 
@@ -96,10 +96,10 @@ export default function Page() {
                 <div className="min-w-0 flex-1">
                   <div className="flex items-baseline justify-between gap-2 font-mono text-[10px]">
                     <span className="truncate text-white/80">{PLATFORMS[r.red]?.label || r.red}</span>
-                    <span className="shrink-0 text-sub"><span className="text-glow">{r.pub}</span>/{r.total}{r.prog ? <span className="text-warning"> · {r.prog}</span> : null}</span>
+                    <span className="shrink-0 text-sub"><span className="text-success">{r.pub}</span>/{r.total}{r.prog ? <span className="text-warning"> · {r.prog}</span> : null}</span>
                   </div>
                   <div className="mt-1 flex h-1 w-full overflow-hidden rounded-full bg-white/5">
-                    <div className="h-full bg-glow" style={{ width: `${(r.pub / r.total) * 100}%` }} />
+                    <div className="h-full bg-success" style={{ width: `${(r.pub / r.total) * 100}%` }} />
                     <div className="h-full bg-warning" style={{ width: `${(r.prog / r.total) * 100}%` }} />
                   </div>
                 </div>

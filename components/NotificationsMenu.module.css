@@ -12,29 +12,29 @@
   gap: 8px;
   margin: 0;
   padding-bottom: 8px;
-  border-bottom: 1px solid #232733;
+  border-bottom: 1px solid #2C3B45;
   font-family: var(--font-mono, 'Google Sans Code', ui-monospace, SFMono-Regular, Consolas, monospace);
   font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: #eef1f0;
+  color: #EEF3F5;
 }
 
 .count {
   padding: 0 6px;
   border-radius: 999px;
-  background: #009f8b;
+  background: #6B9EFF;
   font-size: 10px;
   line-height: 16px;
   letter-spacing: 0;
-  color: #0a0b0d;
+  color: #0E1519;
 }
 
 .empty {
   margin: 0;
   font-size: 13px;
-  color: #8b9097;
+  color: #8A99A3;
 }
 
 .item {
@@ -43,12 +43,12 @@
   gap: 12px;
   width: 100%;
   padding: 12px;
-  border: 1px solid #232733;
+  border: 1px solid #2C3B45;
   border-radius: 6px;
-  background: #171a21;
+  background: #202D35;
   font-family: inherit;
   text-align: left;
-  color: #eef1f0;
+  color: #EEF3F5;
   cursor: pointer;
   transition: border-color 0.15s, background-color 0.15s;
 }
@@ -62,7 +62,7 @@
 
 .item:hover .chevron,
 .item:focus-visible .chevron {
-  color: #1abf9f;
+  color: #6B9EFF;
 }
 
 .text {
@@ -86,14 +86,14 @@
   font-size: 11px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #8b9097;
+  color: #8A99A3;
 }
 
 .meta {
   flex-shrink: 0;
   font-family: var(--font-mono, 'Google Sans Code', ui-monospace, SFMono-Regular, Consolas, monospace);
   font-size: 11px;
-  color: #8b9097;
+  color: #8A99A3;
 }
 
 /* Lo que requiere atención se destaca de lo que solo está por venir. */
@@ -104,7 +104,7 @@
 .chevron.chevron {
   flex-shrink: 0;
   font-size: 18px;
-  color: #8b9097;
+  color: #8A99A3;
   transition: color 0.15s;
 }
 
@@ -118,7 +118,7 @@
   font-family: var(--font-mono, 'Google Sans Code', ui-monospace, SFMono-Regular, Consolas, monospace);
   font-size: 11px;
   text-align: left;
-  color: #1abf9f;
+  color: #6B9EFF;
   cursor: pointer;
 }
 

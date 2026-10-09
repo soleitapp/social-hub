@@ -15,7 +15,7 @@ function Logo({ inverted, size = 18 }) {
   );
 }
 
-function Radar({ size = 340, x = -120, y = -120, opacity = 1, stroke = '#009F8B', dot = '#009F8B' }) {
+function Radar({ size = 340, x = -120, y = -120, opacity = 1, stroke = '#0057FF', dot = '#0057FF' }) {
   const rings = [40, 70, 100, 130, 160];
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="-200 -200 400 400">${rings.map((r) => `<circle cx="0" cy="0" r="${r}" fill="none" stroke="${stroke}" stroke-width="1"/>`).join('')}<circle cx="0" cy="0" r="6" fill="${dot}"/></svg>`;
   const uri = `data:image/svg+xml;base64,${btoa(svg)}`;

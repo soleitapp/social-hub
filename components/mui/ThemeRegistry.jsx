@@ -11,14 +11,14 @@ const theme = createTheme({
   cssVariables: true,
   palette: {
     mode: 'dark',
-    primary: { main: '#009f8b', light: '#1abf9f', dark: '#007a6c' },
+    primary: { main: '#6B9EFF', light: '#6B9EFF', dark: '#5790FF' },
     secondary: { main: '#0b57d0' },
     error: { main: '#d32f2f' },
     warning: { main: '#f6b93b' },
     success: { main: '#4caf50' },
-    background: { default: '#0a0b0d', paper: '#111316' },
-    text: { primary: '#eef1f0', secondary: '#8b9097' },
-    divider: '#232733',
+    background: { default: '#0E1519', paper: '#172127' },
+    text: { primary: '#EEF3F5', secondary: '#8A99A3' },
+    divider: '#2C3B45',
   },
   shape: { borderRadius: 6 },
   components: {

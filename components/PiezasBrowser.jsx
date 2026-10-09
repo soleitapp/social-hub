@@ -13,7 +13,7 @@ import { buildPlacaStory, placaImageOf, storyAssetOf } from '@/lib/storyGen';
 import { cuandoSale, yaSalio, estadoDe, aISO, fmtFecha } from '@/lib/dist';
 
 const TONE = {
-  ok: 'text-glow border-primary/40 bg-primary/10',
+  ok: 'text-success border-success/40 bg-success/10',
   warn: 'text-warning border-warning/40 bg-warning/10',
   info: 'text-teal border-primary/30 bg-primary/[0.06]',
   idle: 'text-sub border-white/10 bg-white/5',
